@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build image') {
             steps {
-                sh 'sudo ./run_docker.sh'
+                sh 'docker build -t html-website:v1 .'
             }
         }
     }
