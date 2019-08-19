@@ -7,9 +7,17 @@ pipeline {
                 sh 'tidy -q -e *.html'
             }
         }
-        stage('Build image') {
+        stage('Build Image') {
             steps {
-                sh 'docker build -t html-website:v1 .'
+                app = docker.build("zhengbill/hello")
+            }
+        }
+        stage('Push Image') {
+            steps {
+                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
+                    app.push("$(env.BUILD_NUMBER")
+                    app.push("lastest")
+                }
             }
         }
     }
