@@ -8,16 +8,12 @@ pipeline {
             }
         }
         stage('Build Image') {
-            steps {
-                app = docker.build("zhengbill/hello")
-            }
+            app = docker.build("zhengbill/hello")
         }
         stage('Push Image') {
-            steps {
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
-                    app.push("${env.BUILD_NUMBER}")
-                    app.push("lastest")
-                }
+            docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
+                app.push("${env.BUILD_NUMBER}")
+                app.push("lastest")
             }
         }
     }
