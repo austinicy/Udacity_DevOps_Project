@@ -4,7 +4,7 @@
 
 # Step 1:
 # This is your Docker ID/path
-dockerpath=zhengbill/app
+dockerpath=zhengbill/hello
 
 
 # Step 2

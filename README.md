@@ -10,12 +10,12 @@ This is the final capstone project for Udaicty Cloud DevOps Nanodegree program. 
 - Building Docker containers in pipelines
 
 ## Project Description 
-This project will deploy a simple nginx staric web page with nginx:alpine. This project will use Jenkin and Blue-Green Deployment.
+This project will deploy a simple nginx staric web page with nginx:alpine. The kubernetes creation used AWS EKS services. This project will use Jenkin and Blue-Green Deployment.
 
 CI/CD Stage:
 1. Start
 2. Liting
 3. Create Docker Image
-4. Push to AWS Kubernetes Cluster 
+4. Push Docker Image to Docker Hub
 
 
