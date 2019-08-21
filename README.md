@@ -1,3 +1,5 @@
+## Github Repo
+https://github.com/austinicy/Udacity_DevOps_Project.git
 
 ## Project Overview
 This is the final capstone project for Udaicty Cloud DevOps Nanodegree program. This project will apply the following skills gained from this couese, this include:
